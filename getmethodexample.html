@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+Get Request Example
+	</title>
+</head>
+<body>
+
+
+<button type="button" onclick="loaddoc()">
+Request Data 	
+</button>
+
+
+<p id="demo">
+	
+</p>
+
+<script type="text/javascript">
+function loaddoc()
+{
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function()
+{
+	if(this.readyState == 4 && this.status==200)
+	{
+		document.getElementById("demo").innerHTML= this.responseText;	
+	}
+}; 
+
+xhttp.open("GET","demo_get2.php?fname=Gunish&lname=Matta",true);
+xhttp.send();
+
+}	
+
+
+
+</script>
+
+
+
+</body>
+</html>

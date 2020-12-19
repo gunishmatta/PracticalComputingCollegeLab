@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Synchronous AJAX
+	</title>
+</head>
+<body>
+<button type="button" onclick="loadDoc()">
+Change Content Synchronous	
+</button>
+
+<h2 id="demo"> Change Me</h2>
+
+<script>
+	function loadDoc() {
+		var xhttp = new XMLHttpRequest();
+		xhttp.open("GET","ajax_info.txt",false);
+		xhttp.send();
+		document.getElementById("demo").innerHTML = xhttp.responseText;
+
+	}
+</script>
+
+</body>
+</html>
